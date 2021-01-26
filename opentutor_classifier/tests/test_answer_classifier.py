@@ -131,7 +131,7 @@ def test_evaluates_one_expectation_for_q1(
                     }
                 ],
             },
-            [ExpectationClassifierResult(expectation=0, evaluation="Bad", score=0.14)],
+            [ExpectationClassifierResult(expectation=0, evaluation="Bad", score=0.12)],
         ),
         (
             "some gibberish kjlsdafhalkjfha",
@@ -144,7 +144,7 @@ def test_evaluates_one_expectation_for_q1(
                     }
                 ],
             },
-            [ExpectationClassifierResult(expectation=0, evaluation="Bad", score=0.14)],
+            [ExpectationClassifierResult(expectation=0, evaluation="Bad", score=0.16)],
         ),
     ],
 )
@@ -219,7 +219,7 @@ def test_evaluates_one_expectation_for_q2(
                     expectation=0, score=0.99, evaluation="Good"
                 ),
                 ExpectationClassifierResult(
-                    expectation=1, score=0.50, evaluation="Bad"
+                    expectation=1, score=0.82, evaluation="Bad"
                 ),
                 ExpectationClassifierResult(
                     expectation=2, score=0.57, evaluation="Bad"
@@ -256,10 +256,10 @@ def test_evaluates_with_no_input_expectation_number_for_q1(
     "input_answer,input_expectation_number,config_data,expected_results,expected_sa_results",
     [
         (
-            "I dont know what you are talking about",
+            "I don't know what you are talking about",
             0,
             {},
-            [ExpectationClassifierResult(expectation=0, score=0.86, evaluation="Bad")],
+            [ExpectationClassifierResult(expectation=0, score=0.95, evaluation="Bad")],
             {
                 "metacognitive": SpeechActClassifierResult(evaluation="Good", score=1),
                 "profanity": SpeechActClassifierResult(evaluation="Bad", score=0),
@@ -269,7 +269,7 @@ def test_evaluates_with_no_input_expectation_number_for_q1(
             "I do not understand",
             0,
             {},
-            [ExpectationClassifierResult(expectation=0, score=0.87, evaluation="Bad")],
+            [ExpectationClassifierResult(expectation=0, score=0.88, evaluation="Bad")],
             {
                 "metacognitive": SpeechActClassifierResult(evaluation="Good", score=1),
                 "profanity": SpeechActClassifierResult(evaluation="Bad", score=0),
@@ -306,17 +306,17 @@ def test_evaluates_with_no_input_expectation_number_for_q1(
             },
         ),
         (
-            "I dont know this shit",
+            "I don't know this shit",
             0,
             {},
-            [ExpectationClassifierResult(expectation=0, score=0.86, evaluation="Bad")],
+            [ExpectationClassifierResult(expectation=0, score=0.95, evaluation="Bad")],
             {
                 "metacognitive": SpeechActClassifierResult(evaluation="Good", score=1),
                 "profanity": SpeechActClassifierResult(evaluation="Good", score=1),
             },
         ),
         (
-            "I dont know this shit but I guess the answer is peer pressure can change your behavior",
+            "I don't know this shit but I guess the answer is peer pressure can change your behavior",
             0,
             {},
             [ExpectationClassifierResult(expectation=0, score=0.99, evaluation="Good")],

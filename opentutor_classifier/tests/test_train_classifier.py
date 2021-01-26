@@ -331,6 +331,20 @@ def _test_train_online(
                 ExpectationClassifierResult(evaluation="Bad", score=0.0, expectation=2),
             ],
         ),
+        (
+            "suicide-risk",
+            "it is less",
+            [
+                ExpectationTrainingResult(accuracy=0.50),
+                ExpectationTrainingResult(accuracy=0.43)
+            ],
+            [
+                ExpectationClassifierResult(
+                    evaluation="Good", score=1.0, expectation=0
+                ),
+                ExpectationClassifierResult(evaluation="Bad", score=0.0, expectation=1),
+            ],
+        ),
     ],
 )
 def test_train_online(
