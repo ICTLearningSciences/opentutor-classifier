@@ -116,20 +116,20 @@ def test_cli_outputs_models_files(
             "peer pressure can change your behavior",
             [
                 ExpectationClassifierResult(
-                    expectation=0, score=0.99, evaluation="Good"
+                    expectation=0, score=0.95, evaluation="Good"
                 ),
                 ExpectationClassifierResult(
-                    expectation=1, score=0.69, evaluation="Bad"
+                    expectation=1, score=0.74, evaluation="Bad"
                 ),
                 ExpectationClassifierResult(
-                    expectation=2, score=0.57, evaluation="Bad"
+                    expectation=2, score=0.62, evaluation="Bad"
                 ),
             ],
         ),
         (
             "question2",
             "Current flows in the same direction as the arrow",
-            [ExpectationClassifierResult(expectation=0, score=0.96, evaluation="Good")],
+            [ExpectationClassifierResult(expectation=0, score=0.95, evaluation="Good")],
         ),
     ],
 )
