@@ -142,13 +142,13 @@ def test_outputs_models_at_specified_model_root_for_default_model(
             ],
             [
                 ExpectationClassifierResult(
-                    evaluation="Good", score=0.99, expectation=0
+                    evaluation="Good", score=0.95, expectation=0
                 ),
                 ExpectationClassifierResult(
-                    evaluation="Bad", score=0.69, expectation=1
+                    evaluation="Bad", score=0.74, expectation=1
                 ),
                 ExpectationClassifierResult(
-                    evaluation="Bad", score=0.57, expectation=2
+                    evaluation="Bad", score=0.62, expectation=2
                 ),
             ],
         ),
@@ -156,7 +156,7 @@ def test_outputs_models_at_specified_model_root_for_default_model(
             "question2",
             "Current flows in the same direction as the arrow",
             [ExpectationTrainingResult(accuracy=1.0)],
-            [ExpectationClassifierResult(evaluation="Good", score=0.96, expectation=0)],
+            [ExpectationClassifierResult(evaluation="Good", score=0.95, expectation=0)],
         ),
     ],
 )
